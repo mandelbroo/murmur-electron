@@ -27,7 +27,8 @@ async function createWindow() {
     const { PythonShell } =  require('python-shell')
 
     async function setColorAndStatus(emoji) {
-      PythonShell.run('./luxafor.py', { args: emoji }, (err, res) => {
+      const pythonPath = '/usr/bin/python3'
+      PythonShell.run('/home/vitalii/code/murmur-electron/luxafor.py', { args: emoji, pythonPath }, (err, res) => {
         if(err) throw(err)
         console.log(res)
       })
