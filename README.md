@@ -14,3 +14,16 @@ $ sudo ./udev-rules.sh # This adds permissions to interact with the Luxafor USB 
 $ pip install pyusb
 $ yarn start
 ```
+
+### reload usb
+```
+$ sudo udevadm control --reload
+$ sudo udevadm trigger
+```
+
+### diagnost usb
+```
+$ usb-devices
+$ dmesg | tail
+$ lsusb
+```
